@@ -9,4 +9,4 @@ class rolModel(models.Model):
     name = fields.Char("Rol Name")
     photo = fields.Image('IMG')
     description = fields.Html('Description')
-    Rol=fields.Many2one("lol_app.player_model",string="Players",readonly=True)
+    Rol=fields.Many2many("lol_app.player_model",string="Players",readonly=True)

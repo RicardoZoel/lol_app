@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "LoL_app",
+    'name': "lol_app",
 
     'summary': """
         Application for managini different task""",
@@ -28,6 +28,8 @@
         #'views/category_views.xml',
         #'views/menu.xml',
     #    'views/templates.xml',
+        'data/data.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

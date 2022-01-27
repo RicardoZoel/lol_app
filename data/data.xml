@@ -1,0 +1,82 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Data Rol -->
+          <record id="1" model="lol_app.rol_model">
+            <field name="name">Top</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Top_icon.png</field>
+          </record>
+          <record id="2" model="lol_app.rol_model">
+            <field name="name">Jungle</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Jungle_icon.png</field>
+          </record> 
+          <record id="3" model="lol_app.rol_model">
+            <field name="name">Mid</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Middle_icon.png</field>
+          </record>
+          <record id="4" model="lol_app.rol_model">
+            <field name="name">Suport</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Support_icon.png</field>
+          </record> 
+          <record id="5" model="lol_app.rol_model">
+            <field name="name">Bottom</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Bottom_icon.png</field>
+          </record> 
+          <record id="6" model="lol_app.rol_model">
+            <field name="name">Specialist</field>
+            <field name="description">Apples</field>
+            <field name="photo">data/imgs/Specialist_icon.png</field>
+          </record> 
+
+        <!-- Data elo -->
+
+        <record id="7" model="lol_app.elo_model">
+            <field name="name">Iron</field>
+        </record> 
+        <record id="8" model="lol_app.elo_model">
+            <field name="name">Bronze</field>
+        </record> 
+        <record id="9" model="lol_app.elo_model">
+            <field name="name">Silver</field>
+        </record> 
+        <record id="10" model="lol_app.elo_model">
+            <field name="name">Gold</field>
+        </record> 
+        <record id="11" model="lol_app.elo_model">
+            <field name="name">Platinum</field>
+        </record> 
+        <record id="12" model="lol_app.elo_model">
+            <field name="name">Diamond</field>
+        </record> 
+        <record id="13" model="lol_app.elo_model">
+            <field name="name">Master</field>
+        </record> 
+        <record id="14" model="lol_app.elo_model">
+            <field name="name">GrandMaster</field>
+        </record> 
+        <record id="15" model="lol_app.elo_model">
+            <field name="name">Chalenger</field>
+        </record> 
+        <!-- Data eloS 
+        <record id="16" model="lol_app.eloS_model">
+            <field name="name">1</field>
+            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+        </record> 
+        <record id="17" model="lol_app.elo_model">
+            <field name="name">2</field>
+            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+        </record> 
+        <record id="18" model="lol_app.elo_model">
+            <field name="name">3</field>
+            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+        </record> 
+        <record id="19" model="lol_app.elo_model">
+            <field name="name">4</field>
+            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+        </record> -->
+    </data>
+</odoo>

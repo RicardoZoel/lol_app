@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class playerModel(models.Model): 
     _name = 'lol_app.player_model'
-    _description = 'Task Category'
+    _description = 'Game Category'
 
     data = fields.Date("Date", default=datetime.now(),required=True)
     team1=fields.Many2one("lol_app.team_model",string="Team 1",Required = True)
