@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_task_app_task_model,task_app.task_model,model_task_app_task_model,base.group_user,1,1,1,1
-access_task_app_category_model,task_app.category_model,model_task_app_category_model,base.group_user,1,1,1,1
+access_lol_app_games_model,lol_app.games_model,model_lol_app_games_model,base.group_user,1,1,1,1

@@ -2,15 +2,13 @@
   <data>
     <!-- Top menu item -->
 
-    <menuitem name="Task app" id="task_app.menu_root"/>
+    <menuitem name="LolApp app" id="lol_app.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Tasks" id="task_app.menu_Tasks" parent="task_app.menu_root"/>
-    <menuitem name="Category" id="task_app.menu_category" parent="task_app.menu_root"/>
+    <menuitem name="Games" id="lol_app.menu_Games" parent="lol_app.menu_root"/>
 
     <!-- actions -->
-    <menuitem name="Tasks" id="task_app.menu_Tasks_list" parent="task_app.menu_Tasks" action="task_app.action_window_task"/>
-    <menuitem name="Category" id="task_app.menu_category_list" parent="task_app.menu_category" action="task_app.action_window_category"/>
+    <menuitem name="Games" id="lol_app.menu_Games_list" parent="lol_app.menu_Games" action="lol_app.action_window_Games"/>
   </data>
 </odoo>

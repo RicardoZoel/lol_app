@@ -1,0 +1,77 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="lol_app.games_model_calendar">
+      <field name="name">Games Calendar</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <calendar date_start="data" mode="month"> 
+          <field name="team1"/>
+          <field name="team2"/>
+        </calendar>
+      </field>
+    </record>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="lol_app.games_model_form">
+      <field name="name">Games Form</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <form string="Games">
+          <sheet>
+            <group name="top">
+              <field name="data"/>
+              <group name="left">
+                <field name="team1"/>
+              </group>
+              <group name="rigth">
+                <field name="team2"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!--
+    <record model="ir.ui.view" id="lol_app.games_model_search">
+      <field name="name">Games Filters</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <filter string="Finished" name="Finished" domain="[('active','=',False)]"/>
+        </search>
+      </field>
+    </record>-->
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="lol_app.action_window_Games">
+      <field name="name">Games Window</field>
+      <field name="res_model">lol_app.games_model</field>
+      <field name="view_mode">form,calendar</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="lol_app.action_server">
+      <field name="name">lol_app server</field>
+      <field name="model_id" ref="model_lol_app_lol_app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <!-- menu categories -->
+
+
+    <!-- actions -->
+  </data>
+</odoo>

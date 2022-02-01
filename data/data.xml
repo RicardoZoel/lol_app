@@ -3,27 +3,33 @@
         <!-- Data Rol -->
           <record id="1" model="lol_app.rol_model">
             <field name="name">Top</field>
-            <field name="description">Apples</field>
+            <field name="description">Within a drafted team, the Top Laner is the champion assigned to the top lane. A Top Laner needs to have high survability, high damage or engages.
+            </field>
             <field name="photo" type="base64" file="lol_app/data/imgs/Top_icon.png"/>
           </record>
           <record id="2" model="lol_app.rol_model">
             <field name="name">Jungle</field>
-            <field name="description">Apples</field>
+            <field name="description">Within a drafted team, the Jungler is the champion assigned to the jungle. A Jungler needs to be able to clear jungle camps without too much difficulty and ambush other champions in lane.
+            </field>
             <field name="photo" type="base64" file="lol_app/data/imgs/Jungle_icon.png"/>
           </record> 
           <record id="3" model="lol_app.rol_model">
             <field name="name">Mid</field>
-            <field name="description">Apples</field>
+            <field name="description">Within a drafted team, the Mid Laner is the champion assigned to the mid lane. A Mid Laner needs to have high burst damage.</field>
             <field name="photo" type="base64" file="lol_app/data/imgs/Middle_icon.png"/>
           </record>
           <record id="4" model="lol_app.rol_model">
             <field name="name">Suport</field>
-            <field name="description">Apples</field>
+            <field name="description">Within a drafted team, the Support is one of the two champions assigned to the bottom lane alongside the Bottom icon.png Bottom Carry. This role's initial goal is to assist their more vulnerable team mate through the earliest stages of the game, and is a position that suits champions with either utility, disengage or high base damage.
+                Within a duo lane, the optimal strategy for earning gold is to designate a single champion to farm while the other is recommended to purchase an economy item. The Support is expected to fulfil the latter designation, and consequently the position is not suitable for champions that are highly dependant on item-based power spikes. The Support is also expected to be the primary contributor to the team's vision.            
+            </field>
             <field name="photo" type="base64" file="lol_app/data/imgs/Support_icon.png"/>
-          </record> 
+          </record>
           <record id="5" model="lol_app.rol_model">
             <field name="name">Bottom</field>
-            <field name="description">Apples</field>
+            <field name="description">Within a drafted team, the Bottom Carry is one of the two champions assigned to the bottom lane alongside the Support icon.png Support. Being the most vulnerable, the Bottom Carry has to acquire as much gold as possible to purchase key items that will greatly increase their fighting potential.
+                Within a duo lane, the optimal strategy for earning gold is to designate a single champion to farm while the other is recommended to purchase an economy item. The Bottom Carry is expected to fulfill the former designation: the position is made for champions that are highly dependant on item-based power spikes.
+            </field>
             <field name="photo" type="base64" file="lol_app/data/imgs/Bottom_icon.png"/>
           </record> 
           <record id="6" model="lol_app.rol_model">
