@@ -7,4 +7,5 @@ class eloModel(models.Model):
     _description = 'Elo Category'
 
     name = fields.Char()
+    value=fields.Integer()
     eloS=fields.One2many("lol_app.elos_model","elo")

@@ -25,11 +25,11 @@
     'data': [
         'security/ir.model.access.csv',
         'views/games_views.xml',
-        #'views/category_views.xml',
+        'views/team_views.xml',
+        'views/player_views.xml',
         'views/menu.xml',
     #    'views/templates.xml',
         'data/data.xml',
-
     ],
     # only loaded in demonstration mode
     'demo': [

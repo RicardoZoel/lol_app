@@ -8,6 +8,6 @@ class gamesModel(models.Model):
     _description = 'Game Category'
 
     data = fields.Date("Date", default=datetime.now(),required=True)
-    team1=fields.Many2one("lol_app.team_model",string="Team 1",Required = True)
-    team2=fields.Many2one("lol_app.team_model",string="Team 2",Required = True)
+    team1=fields.Many2one("lol_app.team_model",string="Team 1",required = True)
+    team2=fields.Many2one("lol_app.team_model",string="Team 2",required = True)
     

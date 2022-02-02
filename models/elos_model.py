@@ -9,3 +9,4 @@ class elosModel(models.Model):
     name = fields.Char()
     elo=fields.Many2one("lol_app.elo_model")
     eloP=fields.Integer()
+    value=fields.Integer()

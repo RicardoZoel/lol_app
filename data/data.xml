@@ -42,47 +42,56 @@
 
         <record id="7" model="lol_app.elo_model">
             <field name="name">Iron</field>
+            <field name="value">0</field>
         </record> 
         <record id="8" model="lol_app.elo_model">
             <field name="name">Bronze</field>
+            <field name="value">500</field>
         </record> 
         <record id="9" model="lol_app.elo_model">
             <field name="name">Silver</field>
+            <field name="value">1000</field>
         </record> 
         <record id="10" model="lol_app.elo_model">
             <field name="name">Gold</field>
+            <field name="value">1500</field>
         </record> 
         <record id="11" model="lol_app.elo_model">
             <field name="name">Platinum</field>
+            <field name="value">2000</field>
         </record> 
         <record id="12" model="lol_app.elo_model">
             <field name="name">Diamond</field>
+            <field name="value">2500</field>
         </record> 
         <record id="13" model="lol_app.elo_model">
             <field name="name">Master</field>
+            <field name="value">3000</field>
         </record> 
         <record id="14" model="lol_app.elo_model">
             <field name="name">GrandMaster</field>
+            <field name="value">3200</field>
         </record> 
         <record id="15" model="lol_app.elo_model">
             <field name="name">Chalenger</field>
+            <field name="value">3500</field>
         </record> 
-        <!-- Data eloS 
-        <record id="16" model="lol_app.eloS_model">
+        <!-- Data eloS
+        <record id="16" model="lol_app.elos_model">
             <field name="name">1</field>
             <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
         </record> 
-        <record id="17" model="lol_app.elo_model">
+        <record id="17" model="lol_app.elos_model">
             <field name="name">2</field>
-            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+            <field name="elo" >Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
         </record> 
-        <record id="18" model="lol_app.elo_model">
+        <record id="18" model="lol_app.elos_model">
             <field name="name">3</field>
-            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+            <field name="elo" >Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
         </record> 
-        <record id="19" model="lol_app.elo_model">
+        <record id="19" model="lol_app.elos_model">
             <field name="name">4</field>
-            <field name="elo">Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
+            <field name="elo" >Iron,Bronze,Silver,Gold,Platinum,Diamond</field>
         </record> -->
     </data>
 </odoo>

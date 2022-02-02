@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lol_app_team_model,lol_app.team_model,model_lol_app_team_model,base.group_user,1,1,1,1
+access_lol_app_player_model,lol_app.player_model,model_lol_app_player_model,base.group_user,1,1,1,1
+access_lol_app_rol_model,lol_app.rol_model,model_lol_app_rol_model,base.group_user,1,1,1,1
+access_lol_app_elo_model,lol_app.elo_model,model_lol_app_elo_model,base.group_user,1,1,1,1
+access_lol_app_elos_model,lol_app.elos_model,model_lol_app_elos_model,base.group_user,1,1,1,1
 access_lol_app_games_model,lol_app.games_model,model_lol_app_games_model,base.group_user,1,1,1,1
