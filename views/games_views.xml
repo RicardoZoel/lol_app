@@ -17,21 +17,38 @@
       <field name="model">lol_app.games_model</field>
       <field name="arch" type="xml">
         <form string="Games">
+          <header>
+            <button name="cancelGame" type="object" string="Check games" class="oe_highlight"/>         
+            <button name="confirmGame" type="object" string="Confirm game" class="oe_highlight" states="NP"/>         
+            <field name="state" widget="statusbar"></field>
+          </header>
           <sheet>
             <group name="top">
-              <field name="data"/>
+              <field name="data" attrs="{'readonly': [('state','=', 'C')]}"/>
               <group name="left">
-                <field name="team1"/>
+                <field name="team1" attrs="{'readonly': [('state','=', 'C')]}"/>
               </group>
               <group name="rigth">
-                <field name="team2"/>
+                <field name="team2" attrs="{'readonly': [('state','=', 'C')]}"/>
               </group>
+              <field name="selecwinner" attrs="{'invisible': [('state','!=', 'P')]}"/>
             </group>
           </sheet>
         </form>
       </field>
     </record>
 
+
+    <record model="ir.ui.view" id="lol_app.games_model_pivot">
+      <field name="name">games Pivot</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <graph type="bar"> 
+          <field name="data" interval="month"/>
+          <field name="winner"/>
+        </graph>
+      </field>
+    </record>
     <!--
     <record model="ir.ui.view" id="lol_app.games_model_search">
       <field name="name">Games Filters</field>
