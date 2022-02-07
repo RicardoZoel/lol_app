@@ -1,6 +1,32 @@
 <odoo>
   <data>
+    <record model="ir.ui.view" id="lol_app.games_model_pivot">
+      <field name="name">games Pivot</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <pivot>
+          <field name="team1" type="row"/>
+          <field name="data"/>
+          <field name="team2"/>
+          <field name="winner"/>
+          
+        </pivot>
+      </field>
+    </record>
 
+    <record model="ir.ui.view" id="lol_app.games_model_graph">
+      <field name="name">games Graph</field>
+      <field name="model">lol_app.games_model</field>
+      <field name="arch" type="xml">
+        <graph type="bar">
+          <field name="team1" type="row"/>
+          <field name="data" interval="month"/>
+          <field name="winner" />
+          
+        </graph>
+      </field>
+    </record>
+    
     <record model="ir.ui.view" id="lol_app.games_model_calendar">
       <field name="name">Games Calendar</field>
       <field name="model">lol_app.games_model</field>
@@ -65,7 +91,7 @@
     <record model="ir.actions.act_window" id="lol_app.action_window_Games">
       <field name="name">Games Window</field>
       <field name="res_model">lol_app.games_model</field>
-      <field name="view_mode">calendar,form</field>
+      <field name="view_mode">calendar,form,graph,pivot</field>
     </record>
 
     <!-- server action to the one above -->

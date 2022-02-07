@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 
 class gamesModel(models.Model): 
     _name = 'lol_app.games_model'
-    _description = 'Game Category'
+    _description = 'Game model'
 
     data = fields.Date("Date", default=datetime.now(),required=True)
     team1=fields.Many2one("lol_app.team_model",string="Team 1",required = True)
@@ -21,7 +21,7 @@ class gamesModel(models.Model):
           self.search([('data', '>', datetime.now() )])
           self._cr.autocommit(False)
           if self.state == "NP" and self.data<datetime.now():
-               self.state = "C"      
+               self.state = "C"
           self._cr.commit()
           self._cr.autocommit(True)
           return True

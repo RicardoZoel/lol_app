@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="lol_app.action_window_rol">
+      <field name="name">rol Window</field>
+      <field name="res_model">lol_app.rol_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="lol_app.action_server">
+      <field name="name">lol_app server</field>
+      <field name="model_id" ref="model_lol_app_lol_app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+    <!-- menu categories -->
+
+
+    <!-- actions -->
+  </data>
+</odoo>
