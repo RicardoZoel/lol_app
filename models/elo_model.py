@@ -6,6 +6,6 @@ class eloModel(models.Model):
     _name = 'lol_app.elo_model'
     _description = 'Elo Category'
 
-    name = fields.Char()
+    name = fields.Char(index=True)
     value=fields.Integer()
     eloS=fields.One2many("lol_app.elos_model","elo")

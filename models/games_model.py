@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
+import this
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
@@ -13,12 +14,12 @@ class gamesModel(models.Model):
     team2=fields.Many2one("lol_app.team_model",string="Team 2",required = True)
     state = fields.Selection(string="Status",selection=[('P','Played'),('NP','NoPlayed'),('C','Canceled')], default="NP")
     # true=team1 / false team2
-    selecwinner = fields.Selection(string="Winner",compute="_check",selection=[('T1','tema1'),('NP','NoPlayed'),('T2','tema2')], default="NP")
-    winner=fields.Char(readonly=True)
+    selecwinner = fields.Selection(string="Winner",selection=[('T1','tema1'),('NP','NoPlayed'),('T2','tema2'),('C','Canceled')], default="NP")
+    winner=fields.Char(readonly=True, compute="_check")
 
     
     def cancelGame(self):
-          self.search([('data', '>', datetime.now() )])
+          self.search([('data', '<', datetime.now() )])
           self._cr.autocommit(False)
           if self.state == "NP" and self.data<datetime.now():
                self.state = "C"
@@ -31,7 +32,6 @@ class gamesModel(models.Model):
           self._cr.autocommit(False)
           if self.state == "NP" or self.state=="C":
                self.state = "P"
-               self.winner
           else:
             self._cr.rollback()
             self._cr.autocommit(True)
@@ -43,6 +43,8 @@ class gamesModel(models.Model):
     @api.depends("selecwinner")
     def _check(self):
         if self.selecwinner=="T1":
-            self.winner=self.team1
+            self.winner=self.team1.name
         elif self.selecwinner=="T2":
-            self.winner=self.team2
+            self.winner=self.team2.name
+        else:
+            self.winner=self.selecwinner

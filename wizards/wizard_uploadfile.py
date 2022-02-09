@@ -18,7 +18,7 @@ class UploadFile(models.TransientModel):
             for line in lines:
                 elements = line.split(';')
                 if len(elements) > 1:
-                    self.env['lol_app.rols_model'].create({
+                    self.env['lol_app.elos_model'].create({
                         'name': elements[0],
                         'elo': float(elements[1])
                     })

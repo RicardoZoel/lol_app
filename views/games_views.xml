@@ -5,11 +5,10 @@
       <field name="model">lol_app.games_model</field>
       <field name="arch" type="xml">
         <pivot>
-          <field name="team1" type="row"/>
-          <field name="data"/>
-          <field name="team2"/>
+          <field name="team1"/>
+          <field name="data" interval="month"/>
+          <field name="team2" />/>
           <field name="winner"/>
-          
         </pivot>
       </field>
     </record>
@@ -19,7 +18,8 @@
       <field name="model">lol_app.games_model</field>
       <field name="arch" type="xml">
         <graph type="bar">
-          <field name="team1" type="row"/>
+          <field name="team1"/>
+          <field name="team2" />
           <field name="data" interval="month"/>
           <field name="winner" />
           
@@ -57,22 +57,10 @@
               <group name="rigth">
                 <field name="team2" attrs="{'readonly': [('state','=', 'C')]}"/>
               </group>
-              <field name="selecwinner" attrs="{'invisible': [('state','!=', 'P')]}"/>
+              <field name="selecwinner" attrs="{'invisible': [('state','!=', 'P')]}" widget="selection"/>
             </group>
           </sheet>
         </form>
-      </field>
-    </record>
-
-
-    <record model="ir.ui.view" id="lol_app.games_model_pivot">
-      <field name="name">games Pivot</field>
-      <field name="model">lol_app.games_model</field>
-      <field name="arch" type="xml">
-        <graph type="bar"> 
-          <field name="data" interval="month"/>
-          <field name="winner"/>
-        </graph>
       </field>
     </record>
     <!--

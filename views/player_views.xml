@@ -23,13 +23,30 @@
       </field>
     </record>
 
+    
     <record model="ir.ui.view" id="lol_app.player_model_search">
       <field name="name">player Filters</field>
       <field name="model">lol_app.player_model</field>
       <field name="arch" type="xml">
         <search>
           <field name="name"/>
-          <filter string="Rol" name="Rol Supp" domain="[('rol','=','Suport')]"/>
+          <filter string="Rol Top" name="Rol Top" domain="[('rol','=','Top')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Jung" name="Rol Jung" domain="[('rol','=','Jungle')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Mid" name="Rol Mid" domain="[('rol','=','Mid')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol ADC" name="Rol ADC" domain="[('rol','=','Suport')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Supp" name="Rol Supp" domain="[('rol','=','Bottom')]"/>
         </search>
       </field>
     </record>
