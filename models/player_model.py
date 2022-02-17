@@ -14,7 +14,7 @@ class playerModel(models.Model):
     team=fields.Many2one("lol_app.team_model",string="Team")
 
     @api.onchange('elo')
-    def onchange_category(self):
+    def onchange_elo(self):
             self.eloS = ""
             domain = {'eloS': [('elo', '=', self.elo.name)]}
             return {'domain': domain}

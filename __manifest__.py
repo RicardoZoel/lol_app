@@ -27,6 +27,7 @@
         'views/games_views.xml',
         'views/team_views.xml',
         'views/player_views.xml',
+        'views/elos_views.xml',
         'views/rol_views.xml',
         'views/menu.xml',
     #    'views/templates.xml',

@@ -8,4 +8,4 @@ class eloModel(models.Model):
 
     name = fields.Char(index=True)
     value=fields.Integer()
-    eloS=fields.One2many("lol_app.elos_model","elo")
+    eloS=fields.Many2many("lol_app.elos_model", relation="lol_app_elo_model2elos_model")

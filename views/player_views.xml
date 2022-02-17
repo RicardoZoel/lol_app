@@ -23,7 +23,8 @@
       </field>
     </record>
 
-    
+
+    <!--
     <record model="ir.ui.view" id="lol_app.player_model_search">
       <field name="name">player Filters</field>
       <field name="model">lol_app.player_model</field>
@@ -50,6 +51,8 @@
         </search>
       </field>
     </record>
+  -->
+
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="lol_app.player_model_form">
       <field name="name">Player Form</field>
@@ -104,6 +107,32 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="lol_app.player_model_search">
+      <field name="name">Player Filters</field>
+      <field name="model">lol_app.player_model</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <filter string="Rol Supp" name="Rol Supp" domain="[('rol','=','Bottom')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol ADC" name="Rol ADC" domain="[('rol','=','Suport')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Mid" name="Rol Mid" domain="[('rol','=','Mid')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Jung" name="Rol Jung" domain="[('rol','=','Jungle')]"/>
+        </search>
+        <search>
+          <field name="name"/>
+          <filter string="Rol Top" name="Rol Top" domain="[('rol','=','Top')]"/>
+        </search>
+      </field>
+    </record>
 
     <!-- actions opening views on models -->
 
@@ -122,7 +151,7 @@
       <field name="code">
         action = {
           "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
+          "view_mode": "tree,f<orm",
           "res_model": model._name,
         }
       </field>

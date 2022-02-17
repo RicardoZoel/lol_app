@@ -5,9 +5,7 @@
       <field name="model">lol_app.games_model</field>
       <field name="arch" type="xml">
         <pivot>
-          <field name="team1"/>
           <field name="data" interval="month"/>
-          <field name="team2" />/>
           <field name="winner"/>
         </pivot>
       </field>
@@ -58,6 +56,7 @@
                 <field name="team2" attrs="{'readonly': [('state','=', 'C')]}"/>
               </group>
               <field name="selecwinner" attrs="{'invisible': [('state','!=', 'P')]}" widget="selection"/>
+              <field name="winner" attrs="{'invisible': [('state','!=', 'P')]}"/>
             </group>
           </sheet>
         </form>

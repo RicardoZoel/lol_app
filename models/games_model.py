@@ -48,3 +48,6 @@ class gamesModel(models.Model):
             self.winner=self.team2.name
         else:
             self.winner=self.selecwinner
+
+
+# campos calculados, api constraints, api.depens, (calculo de media de elo), argelar pivot, arreglar la subclase elos

@@ -5,3 +5,4 @@ access_lol_app_rol_model,lol_app.rol_model,model_lol_app_rol_model,base.group_us
 access_lol_app_elo_model,lol_app.elo_model,model_lol_app_elo_model,base.group_user,1,1,1,1
 access_lol_app_elos_model,lol_app.elos_model,model_lol_app_elos_model,base.group_user,1,1,1,1
 access_lol_app_games_model,lol_app.games_model,model_lol_app_games_model,base.group_user,1,1,1,1
+access_lol_app_upload_file,lol_app.upload_file,model_lol_app_upload_file,base.group_user,1,1,1,1
