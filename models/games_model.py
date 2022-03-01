@@ -50,4 +50,4 @@ class gamesModel(models.Model):
             self.winner=self.selecwinner
 
 
-# campos calculados, api constraints, api.depens, (calculo de media de elo), argelar pivot, arreglar la subclase elos
+# campos calculados, api constraints, api depens, (calculo de media de elo), argelar pivot, arreglar la subclase elos

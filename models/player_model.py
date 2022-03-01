@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
-
+import logging
+_logger = logging.getLogger(__name__)
 
 class playerModel(models.Model): 
     _name = 'lol_app.player_model'
@@ -16,5 +17,7 @@ class playerModel(models.Model):
     @api.onchange('elo')
     def onchange_elo(self):
             self.eloS = ""
-            domain = {'eloS': [('elo', '=', self.elo.name)]}
+            elos_ids = self.env['lol_app.elos_model'].search([('elo','=',self.elo.id)])
+            _logger.debug("----------------------->" + str(elos_ids))
+            domain = {'eloS': [('eloS', '=', elos_ids)]}
             return {'domain': domain}
